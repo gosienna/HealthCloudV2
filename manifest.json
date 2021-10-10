@@ -1,11 +1,9 @@
 {
-"manifest_version": 2,
+"manifest_version": 3,
 "name": "HealthCloud",
-"version": "1.0",
+"version": "2.0",
 "background":{
-   "scripts":[
-    "background_script.js" 
-   ],
+   "service_worker": "background_script.js",
    "persistant":false
 },
 "content_scripts":[
@@ -15,5 +13,11 @@
     "css": ["css/bootstrap.min.css"]	
     }
    ],
-"permissions":["storage"]
+"permissions":["tabs","storage"],
+"action": {
+   "default_popup": "popup.html",
+   "default_icon": {
+     "16": "icon.png"
+   }
+ }
 }
