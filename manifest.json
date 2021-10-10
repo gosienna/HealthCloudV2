@@ -1,0 +1,19 @@
+{
+"manifest_version": 2,
+"name": "HealthCloud",
+"version": "1.0",
+"background":{
+   "scripts":[
+    "background_script.js" 
+   ],
+   "persistant":false
+},
+"content_scripts":[
+   {
+    "matches":["https://medcloud.nhi.gov.tw/imme0008/*"],
+    "js":["extract_health_data.js","show_data.js","js/bootstrap.bundle.min.js"],
+    "css": ["css/bootstrap.min.css"]	
+    }
+   ],
+"permissions":["storage"]
+}
